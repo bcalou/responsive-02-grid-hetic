@@ -52,40 +52,40 @@ table {
   border-spacing: 0;
 }
 
-.el-alkaliMetal {
-  background: #3014d2;
+.el .el--alkaliMetal {
+  background: #ffa5a5;
 }
 
-.el-lanthanide {
-  background: #3014d2;
+.el .el--lanthanide {
+  background: #a5ffd6;
 }
 
-.el-nobleGas {
-  background: #3014d2;
+.el .el--nobleGas {
+  background: #ffd932;
 }
 
-.el-transitionMetal {
-  background: #3014d2;
+.el .el--transitionMetal {
+  background: #cc89ff;
 }
 
-.el-postTransitionMetal {
-  background: #3014d2;
+.el .el--postTransitionMetal {
+  background: #ff7f7f;
 }
 
-.el-alkalineEarthMetal {
-  background: #3014d2;
+.el .el--alkalineEarthMetal {
+  background: #65EDE2;
 }
 
-.el-actinide {
-  background: #3014d2;
+.el .el--actinide {
+  background: #b8d2ff;
 }
 
-.el-metalloid {
-  background: #3014d2;
+.el .el--metalloid {
+  background: #ffae03;
 }
 
-.el-otherNonMetal {
-  background: #3014d2;
+.el .el--otherNonMetal {
+  background: #ea3546;
 }
 
 * {
