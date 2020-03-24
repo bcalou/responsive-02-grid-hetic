@@ -28,6 +28,19 @@ body {
   }
 }
 
+@include classicTable {
+  @for $i from 1 through 18 {
+    .el[data-group='#{$i}'] {
+      grid-column: $i;
+    }
+  }
+  @for $i from 1 through 7 {
+    .el[data-period='#{$i}'] {
+      grid-row: $i;
+    }
+  }
+}
+
 @each $type in $types {
   .el--#{$type} {
     background-color: hsl(index($types, $type) * 40, 50, 50);
