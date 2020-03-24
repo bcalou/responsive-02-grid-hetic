@@ -1,0 +1,23 @@
+{
+  "name": "responsive-02-grid-hetic",
+  "version": "1.0.0",
+  "description": "Pour se familiariser avec les différentes propriétés : [Grid Garden](https://cssgridgarden.com/#fr)",
+  "main": "index.js",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "serve": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaevaWolff/responsive-02-grid-hetic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaevaWolff/responsive-02-grid-hetic/issues"
+  },
+  "homepage": "https://github.com/MaevaWolff/responsive-02-grid-hetic#readme"
+}
