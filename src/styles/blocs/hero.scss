@@ -5,12 +5,12 @@ $alkalineEarthMetal-color: hsl(70deg, 50, 50);
 $metalloid-color: hsl(110deg, 50, 50);
 $postTransitionMetal: hsl(160deg, 50, 50);
 $transitionMetal-color: hsl(190deg, 50, 50);
+
 .el {
   background-color: lightgrey;
 }
 
 $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
-
 @each $type in $types {
   .el--otherNonMetal {
     background-color: $otherMonMetal-color;
@@ -33,4 +33,12 @@ $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
   .el--transitionMetal {
     background-color: $transitionMetal-color;
   }
+}
+
+.el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  margin: 1px;
 }
