@@ -5,8 +5,36 @@ $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alka
     background-color: hsl(329, 82%, 67%);
   }
 
-  .el--#{nth($types, 1)} {
-    background-color: hsl(329, 82%, 67%);
+  .el--#{nth($types, 2)} {
+    background-color: hsl(209, 82%, 67%);
+  }
+
+  .el--#{nth($types, 3)} {
+    background-color: hsl(164, 82%, 67%);
+  }
+
+  .el--#{nth($types, 4)} {
+    background-color: hsl(344, 82%, 67%);
+  }
+
+  .el--#{nth($types, 5)} {
+    background-color: hsl(44, 82%, 67%);
+  }
+
+  .el--#{nth($types, 6)} {
+    background-color: hsl(284, 82%, 67%);
+  }
+
+  .el--#{nth($types, 7)} {
+    background-color: hsl(14, 82%, 67%);
+  }
+
+  .el--#{nth($types, 8)} {
+    background-color: hsl(89, 82%, 67%);
+  }
+
+  .el--#{nth($types, 9)} {
+    background-color: hsl(194, 82%, 67%);
   }
 }
 

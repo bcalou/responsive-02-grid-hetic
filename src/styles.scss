@@ -5,7 +5,7 @@
 @import "global/variables.scss";
 
 
-body {
+html {
   * {
     box-sizing: border-box;
   }
@@ -14,9 +14,8 @@ body {
     max-width: 100%;
   }
 
-  .el {
-    background-color: lightgrey;
-  }
+  background-color: lightgrey;
+
 }
 
 
