@@ -1,0 +1,28 @@
+@import "./reset.scss";
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.el {
+  color: lightgrey;
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl(index($types, $type) * 40, 45, 55);
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 4px;
+}
