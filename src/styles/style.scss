@@ -12,18 +12,16 @@ img {
 
 //variables
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
-$hue: 0deg;
-$saturation: 50%;
-$lightness: 50%;
 
 
 //scss
+
 .el{
-  color: lightgrey;
+  background-color: lightgrey;
 }
 
 @each $type in $types {
-  .el{
-  hsl($hue, $saturation, $lightness);
+  .el--#{$type} {
+    background-color: hsl(index($types, $type) * 26, 80, 50 + 1);
   }
 }
