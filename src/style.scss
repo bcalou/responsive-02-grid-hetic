@@ -35,3 +35,16 @@ body {
     background-color: hsl($i * (360 / length($types)), 50, 60);
   }
 }
+
+@include desktop {
+  @for $i from 1 to 20 {
+    .el[data-group="#{$i}"] {
+      grid-column: $i;
+    }
+  }
+  @for $i from 1 to 10 {
+    .el[data-period="#{$i}"] {
+      grid-row: $i;
+    }
+  }
+}
