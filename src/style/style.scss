@@ -1,4 +1,17 @@
 @import "../style/vendor/reset.scss";
+$nbElements: 9;
+$offset: 360 / $nbElements + 1;
+$types: "alkaliMetal", "lanthanide", "nobleGas", "transitionMetal",
+  "postTransitionMetal", "alkalineEarthMetal", "actinide", "metalloid",
+  "otherNonMetal";
+$deg: 0;
+
+@each $type in $types {
+  $deg: $deg + $offset;
+  .el--#{$type} {
+    background-color: hsl($deg, 45, 60);
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -6,4 +19,31 @@
 
 img {
   max-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 1rem;
+  .el {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    &__number {
+      font-size: 12px;
+      padding-top: 15px;
+    }
+    &__symbol {
+      font-weight: 800;
+      font-size: 40px;
+      padding-top: 20px;
+    }
+    &__name {
+      font-size: 12px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
 }
