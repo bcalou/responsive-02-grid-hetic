@@ -58,7 +58,7 @@ body {
 
   @include desktop {
     grid-template-columns: repeat(18, 88px);
-    grid-template-rows: repeat(7, 88px);
+    grid-template-rows: repeat(10, 88px);
 
     @for $i from 1 through 18 {
       article[data-group="#{$i}"] {
@@ -66,7 +66,7 @@ body {
       }
     }
 
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
       article[data-period="#{$i}"] {
         grid-row: $i;
       }
