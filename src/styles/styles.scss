@@ -15,6 +15,13 @@ $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alka
 
   @each $type in $types {
     .el--#{$type} {
-      background-color: hsl(index($types, $type) * 36, 50, 50);
+      background-color: hsl(index($types, $type) * 36, 40, 50);
     }
   }
+body{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(18, minmax(100px, auto));
+    grid-gap: 0.5em;
+}
