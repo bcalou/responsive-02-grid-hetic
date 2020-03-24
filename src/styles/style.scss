@@ -1,0 +1,15 @@
+@import "reset/reset.scss";
+
+.el {
+  background-color: lightgrey;
+  color: black;
+}
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl((36 * index($types, $type)) * 7, 55%, 55%, 0.7);
+  }
+}
