@@ -12,13 +12,6 @@ $types: "alkaliMetal", "lanthanide", "nobleGas", "transitionMetal",
 $deg: 0;
 $margin: 20px;
 
-@each $type in $types {
-  .el--#{$type} {
-    background-color: hsl($deg, 45, 60);
-  }
-  $deg: $deg + $offset;
-}
-
 body {
   display: grid;
   grid-gap: 5px;
@@ -26,6 +19,7 @@ body {
 }
 
 .el {
+  background-color: lightgray;
   font-family: Helvetica;
   font-size: 40px;
   color: black;
@@ -46,6 +40,13 @@ body {
     font-size: 16px;
     margin-bottom: $margin;
   }
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl($deg, 45, 60);
+  }
+  $deg: $deg + $offset;
 }
 
 @include desktop {
