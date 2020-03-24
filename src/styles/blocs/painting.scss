@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+  .el {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+  .el > p {
+    background: #A9A9A9;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  body {
+    margin: 1rem;
+    font: 12px;
+  }
+  
