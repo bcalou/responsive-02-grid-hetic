@@ -6,4 +6,15 @@ img {
   max-width: 100%;
 }
 
+$colors: gold darkred darksalmon;
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+@each $color in $colors {
+  .el--#{$colors} {
+    color: $color;
+  }
+}
+
 @import "reset.scss";
+@import "element.scss";
