@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+$small-size: 15px;
+$big-size: 34px;
+
+$desktop: 1400px;
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+.el {
+  background-color: lightgrey;
+
+  &__number {
+    font-size: $small-size;
+  }
+  &__symbol {
+    font-size: $big-size;
+  }
+  &__name {
+    font-size: $small-size;
+    @include desktop {
+      font-size: 11px;
+    }
+  }
+}
+
+$lists: alkaliMetal, nobleGas, transitionMetal, postTransitionMetal,
+  alkalineEarthMetal, actinide, metalloid, otherNonMetal, lanthanides;
+
+$saturation: 60%;
+$lightness: 75%;
+$hue: 360deg;
+
+@each $list in $lists {
+  .el--#{$list} {
+    background: hsl($hue, $saturation, $lightness);
+  }
+  $hue: $hue + 200;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+
+  padding: 5px;
+  grid-gap: 5px;
+
+  @include desktop {
+    grid-template-columns: repeat(18, 88px);
+    grid-template-rows: repeat(10, 88px);
+
+    @for $i from 1 through 18 {
+      article[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      article[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+  }
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+}
