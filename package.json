@@ -4,7 +4,8 @@
   "description": "## Entraînement",
   "main": "index.js",
   "scripts": {
-    "serve": "parcel src/index.html"
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Hgo0123/responsive-02-grid-hetic#readme",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "sass": "^1.26.3"
   }
 }
