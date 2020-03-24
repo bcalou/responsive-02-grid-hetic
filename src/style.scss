@@ -1,3 +1,6 @@
+@import "reset.scss";
+@import "mixin.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -6,24 +9,29 @@ img {
   max-width: 100%;
 }
 
-@import "reset.scss";
-
-$types: alkaliMetal,
-  lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal
-    actinide metalloid otherNonMetal;
-
-@each $type in types {
-  .el--#{$types} {
-    background-color: red;
-  }
-}
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
 
 body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-template-rows: repeat(10, 100px);
+  grid-template-rows: repeat(7, 100px) repeat(3, 100px);
+  grid-gap: 0.2rem;
 }
 
 .el {
-  color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lightgrey;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@for $i from 1 through length($types) {
+  .el--#{nth($types, $i)} {
+    background-color: hsl($i * (360 / length($types)), 50, 60);
+  }
 }
