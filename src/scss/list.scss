@@ -1,17 +1,8 @@
-$types:
-    alkaliMetal #ffa5a5,
-    lanthanide #a5ffd6,
-    nobleGas #ffd932,
-    transitionMetal #cc89ff,
-    postTransitionMetal #ff7f7f,
-    alkalineEarthMetal #65EDE2,
-    actinide #b8d2ff,
-    metalloid #ffae03,
-    otherNonMetal #ea3546;
-
-
-@each $type in $types {
-    .el .el--#{nth($type, 1)} {
-        background: nth($type, 2);
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+@for $i from 2 through 10 {
+    @each $type in $types {
+        .el--#{$type} {
+            background: calc(hsl(30deg, 11%, 8%) + $i);
+        }
     }
-  }
+} 
