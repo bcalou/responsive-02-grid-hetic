@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.el {
+  background-color: lightgrey;
+}
+
+$lists: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
+  alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+
+$saturation: 60%;
+$lightness: 70%;
+$hue: 70deg;
+
+@each $list in $lists {
+  .el--#{$list} {
+    background: hsl($hue, $saturation, $lightness);
+  }
+  $hue: $hue + 50;
+}
