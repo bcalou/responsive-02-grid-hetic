@@ -1,0 +1,7 @@
+$types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+
+@each $types in $types {
+    .el-#{$types} {
+      background: red;
+    }
+  }

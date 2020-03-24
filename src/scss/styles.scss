@@ -1,5 +1,5 @@
 @import "reset.scss";
-
+@import "list.scss";
 * {
     box-sizing: border-box;
   }
@@ -8,3 +8,6 @@
     max-width: 100%;
   }
   
+  .el {
+      background: lightgrey;
+  }
