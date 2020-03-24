@@ -1,0 +1,84 @@
+.el {
+    color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Montserrat;
+  
+    &--otherNonMetal {
+      &:hover {
+        background-color: white;
+        color: #cc0088;
+      }
+    }
+  
+    &--nobleGas {
+      &:hover {
+        background-color: white;
+        color: #88cc00;
+      }
+    }
+  
+    &--alkaliMetal {
+      &:hover {
+        background-color: white;
+        color: #cc0000;
+      }
+    }
+  
+    &--alkalineEarthMetal {
+      &:hover {
+        background-color: white;
+        color: #0088cc;
+      }
+    }
+  
+    &--metalloid {
+      &:hover {
+        background-color: white;
+        color: #8800cc;
+      }
+    }
+  
+    &--postTransitionMetal {
+      &:hover {
+        background-color: white;
+        color: #00cc88;
+      }
+    }
+  
+    &--transitionMetal {
+      &:hover {
+        background-color: white;
+        color: #00cc00;
+      }
+    }
+  
+    &--lanthanide {
+      &:hover {
+        background-color: white;
+        color: #cc8800;
+      }
+    }
+  
+    &--actinide {
+      &:hover {
+        background-color: white;
+        color: #0000cc;
+      }
+    }
+  }
+  
+  .el__number {
+    font-size: 20px;
+  }
+  
+  .el__symbol {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .el__name {
+    font-size: 15px;
+  }
