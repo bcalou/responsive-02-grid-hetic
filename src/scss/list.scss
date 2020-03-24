@@ -1,7 +1,8 @@
+$colors: #ffa5a5, #a5ffd6, #ffd932, #cc89ff, #ff7f7f;
 $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
 
-@each $types in $types {
-    .el-#{$types} {
-      background: red;
+@for $i from 1 through 3 {
+    .el:nth-child(3n + #{$i}) {
+      background-color: lighten($base-color, $i * 5%);
     }
   }
