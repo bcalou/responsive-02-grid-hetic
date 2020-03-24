@@ -1,0 +1,21 @@
+/************ IMPORTGLOBAL ************/
+
+
+@import "global/reset.scss";
+
+
+body {
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .el {
+    background-color: lightgrey;
+  }
+}
+
+
