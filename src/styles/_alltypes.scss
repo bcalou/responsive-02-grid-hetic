@@ -10,6 +10,17 @@ img {
   background-color: lightgrey;
 }
 
+$small-size: 15px;
+$big-size: 34px;
+
+$desktop: 1400px;
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
 $lists: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
   alkalineEarthMetal, actinide, metalloid, otherNonMetal;
 
@@ -31,6 +42,11 @@ body {
 
   padding: 5px;
   grid-gap: 5px;
+
+  @include desktop {
+    grid-template-columns: repeat(18, 100px);
+    grid-template-rows: repeat(7, 100px);
+  }
 }
 
 article {
@@ -43,12 +59,12 @@ article {
 
 .el {
   &__number {
-    font-size: 15px;
+    font-size: $small-size;
   }
   &__symbol {
-    font-size: 34px;
+    font-size: $big-size;
   }
   &__name {
-    font-size: 15px;
+    font-size: $small-size;
   }
 }
