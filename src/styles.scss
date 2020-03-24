@@ -1,0 +1,21 @@
+@import "reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+$colors: red, blue, green, yellow;
+
+@each $color in $colors {
+  .el--#{$color} {
+    background-color: #{$color};
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.el {
+  color: lightgrey;
+}
