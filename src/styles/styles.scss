@@ -29,11 +29,12 @@ img {
     margin-top: 20px;
   }
   &__symbol {
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 24px;
     margin-bottom: 20px;
   }
   &__name {
-    font-size: 16px;
+    font-size: 10px;
     margin-bottom: 20px;
   }
 }
@@ -51,15 +52,15 @@ body {
   @include fullscreen {
     grid-template-columns: repeat(18, auto);
     grid-template-rows: repeat(7, 1fr);
+    @for $n from 1 through 7 {
+      .el[data-period="#{$n}"] {
+        grid-row: $n;
+      }
+    }
+    @for $n from 1 through 18 {
+      .el[data-group="#{$n}"] {
+        grid-column: $n;
+      }
+    }
   }
-}
-
-.el__name {
-  @include fullscreen {
-    font-size: 10px;
-  }
-}
-
-.el__symbol {
-  font-size: 24px;
 }
