@@ -1,9 +1,22 @@
 @import "reset";
+@import "../scss/element.scss";
 * {
     box-sizing: border-box;
   }
   
-  img {
+img {
     max-width: 100%;
-  }
-  $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+}
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$hue: 0deg;
+$saturation : 80%;
+$lightness : 50%;
+
+@each $type in $types {
+    .el--#{w$types} {
+        background-color: hsl($hue, $saturation, $lightness);
+    }
+    
+}
+
