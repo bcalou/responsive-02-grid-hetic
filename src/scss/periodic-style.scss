@@ -1,4 +1,5 @@
 body {
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: 150px;
@@ -6,9 +7,50 @@ body {
 
   @include classicTable {
     grid-template-columns: repeat(18, minmax(50px, 1fr));
+    grid-auto-rows: 100px;
+
+    @for $i from 1 through 18 {
+      .el[data-group='#{$i}'] {
+        grid-column: $i;
+        @for $i from 1 through 7 {
+          .el[data-period='#{$i}'] {
+            grid-row: $i;
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through 15 {
+      .el:nth-child(#{$i + 88}) {
+        grid-row: 8;
+        grid-column: $i + 3;
+      }
+      .el:nth-child(#{$i + 103}) {
+        grid-row: 9;
+        grid-column: $i + 3;
+      }
+    }
+  }
+
+  @include wildTable {
+    grid-template-columns: repeat(33, minmax(50px, 1fr));
+    @for $i from 3 through 18 {
+      .el[data-group='#{$i}'] {
+        grid-column: $i + 14;
+      }
+    }
+    @for $i from 1 through 15 {
+      .el:nth-child(#{$i + 88}) {
+        grid-row: 6;
+        grid-column: $i + 2;
+      }
+      .el:nth-child(#{$i + 103}) {
+        grid-row: 7;
+        grid-column: $i + 2;
+      }
+    }
   }
 }
-
 .el {
   background-color: lightgray;
   display: flex;
@@ -28,21 +70,12 @@ body {
   }
 }
 
-@include classicTable {
-  @for $i from 1 through 18 {
-    .el[data-group='#{$i}'] {
-      grid-column: $i;
-    }
-  }
-  @for $i from 1 through 7 {
-    .el[data-period='#{$i}'] {
-      grid-row: $i;
-    }
-  }
-}
-
 @each $type in $types {
   .el--#{$type} {
-    background-color: hsl(index($types, $type) * 40, 50, 50);
+    background-color: hsl(
+      (index($types, $type) * (360 / length($types)-1)),
+      50,
+      50
+    );
   }
 }

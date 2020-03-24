@@ -7,10 +7,16 @@ img {
 }
 
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
-  alkalineEarthMetal actinide metalloid otherNonMetal;
+  alkalineEarthMetal actinide metalloid otherNonMetal lanthanides actinides;
 
 @mixin classicTable {
   @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin wildTable {
+  @media (min-width: 1700px) {
     @content;
   }
 }
