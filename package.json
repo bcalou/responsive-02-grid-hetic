@@ -1,0 +1,24 @@
+{
+  "name": "responsive-02-grid-hetic",
+  "version": "1.0.0",
+  "description": "A periodic board",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamyCerin/responsive-02-grid-hetic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamyCerin/responsive-02-grid-hetic/issues"
+  },
+  "homepage": "https://github.com/CamyCerin/responsive-02-grid-hetic#readme"
+}
