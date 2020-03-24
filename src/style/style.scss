@@ -1,4 +1,5 @@
 @import "../style/vendor/reset.scss";
+@import "../style/mixin.scss";
 $nbElements: 9;
 $offset: 360 / $nbElements + 1;
 $types: "alkaliMetal", "lanthanide", "nobleGas", "transitionMetal",
@@ -24,7 +25,9 @@ img {
 body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
+  margin: 0.5rem;
+  max-width: 100vw;
   .el {
     display: flex;
     justify-content: center;
@@ -44,6 +47,23 @@ body {
       font-size: 12px;
       padding-top: 30px;
       padding-bottom: 20px;
+    }
+  }
+  @include desktop {
+    grid-template-columns: repeat(18, minmax(150px, 1fr));
+    grid-template-rows: 7;
+    @for $i from 1 through 7 {
+      .el[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+    @for $i from 1 through 18 {
+      .el[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+    &__name {
+      font-size: 10px;
     }
   }
 }
