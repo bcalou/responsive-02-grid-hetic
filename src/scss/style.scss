@@ -1,3 +1,6 @@
+@import '../scss/config/mixin.scss';
+@import '../scss/vendors/reset.css';
+
 * {
   box-sizing: border-box;
 }
@@ -6,8 +9,47 @@ img {
   max-width: 100%;
 }
 
-$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal actinide lanthanides;
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat(7, 100px) 20px repeat(2, 100px);
+  grid-gap: 0.2em;
+}
 
 .el {
-  background-color: lightgrey;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .el__symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+@for $i from 1 through length($types) {
+  .el--#{nth($types, $i)} {
+    background-color: #{hsl($i * 32.5, 80, 50)};
+  }
+}
+
+
+@include desktop {
+
+
+  @for $i from 1 through 18 {
+      .el[data-group='#{$i}'] {
+        grid-column: $i;
+      }
+    }
+    @for $i from 1 through 10 {
+      .el[data-period='#{$i}'] {
+        grid-row: $i;
+      }
+    }
+
 }
