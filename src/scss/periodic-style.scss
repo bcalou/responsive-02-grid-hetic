@@ -1,0 +1,9 @@
+.el {
+  background-color: lightgray;
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl(index($types, $type) * 40, 70, 50);
+  }
+}
