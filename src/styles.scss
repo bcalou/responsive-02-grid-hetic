@@ -1,0 +1,20 @@
+@import "reset.scss";
+
+.el {
+  $colors: red, blue, green, purple, pink, yellow, aquamarine, salmon, black;
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  .el {
+    background-color: grey;
+  }
+  @each $color in $colors {
+    .el {
+      background-color: $colors;
+    }
+  }
+}
