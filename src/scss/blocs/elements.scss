@@ -1,17 +1,17 @@
 .el--gas {
-  abbr {
+  abbr, .el__nameState--gas {
   color: rgb(255, 0, 0);
   }
 }
 
 .el--liquid {
-  abbr {
+  abbr, .el__nameState--liquid {
   color: blue;
   }
 }
 
 .el--unknown {
-  abbr {
+  abbr, .el__nameState--unknown {
   color: darkslategrey;
   }
 }
