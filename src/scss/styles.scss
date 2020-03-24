@@ -1,0 +1,51 @@
+@import 'layouts/reset';
+@import 'layouts/elements.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+$types: alkaliMetal,
+lanthanide,
+nobleGas,
+transitionMetal,
+postTransitionMetal,
+alkalineEarthMetal,
+actinide,
+metalloid,
+otherNonMetal;
+
+
+$length: 360;
+$nth : 9;
+$index: 1;
+
+
+@each $type in $types {
+  .el--#{$type} {
+    @for $i from 1 to $nth {
+      background-color: hsl(($i * 40deg) 100% 20%);
+    }
+  }
+}
+
+// @for $i from 1 through 9 {
+//   @each $type in $types {
+//     .el--#{$type} {
+//       color: hsl(($i * 40deg) 100% 20%);
+
+//     }
+//   }
+// }
+
+// $base-color: 0;
+
+// @for $i from 1 through 9 {
+//   .el--#{$type} {
+//     background-color: hsl(($i * 40deg) 100% 20%);
+//   }
+// }
