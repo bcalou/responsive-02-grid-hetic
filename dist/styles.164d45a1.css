@@ -198,7 +198,6 @@ body .el__symbol {
 }
 body .el__name {
   padding: 20px 0px 10px 0px;
-  font-weight: lighter;
 }
 
 @media (min-width: 1000px) {
