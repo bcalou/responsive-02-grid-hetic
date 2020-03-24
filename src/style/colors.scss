@@ -1,5 +1,45 @@
-.el{
-	color: lightgray;
+$margin : 20px;
+
+.el {
+	background-color: lightgray;
+	font-family: Helvetica;
+  	font-size: 40px;
+ 	 color: black;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: space-between;
+	&__number {
+		font-size: 16px;
+		margin-bottom: $margin;
+		margin-top: $margin;
+	  }
+	  &__symbol {
+		font-weight: 700;
+		margin-bottom: $margin;
+	  }
+	  &__name {
+		font-size: 16px;
+		margin-bottom: $margin;
+	  }
+	
+}
+
+$nbElements: 9;
+$offset: 360 / $nbElements + 1;
+$types: "alkaliMetal", "lanthanide", "nobleGas", "transitionMetal",
+  "postTransitionMetal", "alkalineEarthMetal", "actinide", "metalloid",
+  "otherNonMetal";
+$deg: 0;
+
+@each $type in $types {
+	.el--#{$type} {
+	  background-color: hsl($deg, 50, 50);
+	}
+	$deg: $deg + $offset;
+}
+body{
 	display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5px;
 }
