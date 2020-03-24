@@ -18,3 +18,9 @@ $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
     background-color: hsl((36 * index($types, $type)), 30, 50);
   }
 }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
