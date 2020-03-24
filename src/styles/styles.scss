@@ -8,4 +8,16 @@ img {
   max-width: 100%;
 }
 
+.el {
+  color: lightgrey;
+}
 
+$types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
+  alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl(index($types, $type) * 39, 70, 50 + 1);
+    color: hsl(index($types, $type) * 39, 50, 20 + 1);
+  }
+}
