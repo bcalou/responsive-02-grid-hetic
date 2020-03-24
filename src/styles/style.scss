@@ -1,5 +1,11 @@
 @import "./reset.scss";
 
+@mixin large {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
   alkalineEarthMetal actinide metalloid otherNonMetal;
 
@@ -17,6 +23,11 @@ body {
   grid-auto-rows: 100px;
   grid-gap: 4px;
   margin: 4px;
+
+  @include large {
+    grid-template-columns: repeat(18, minmax(70px, 1fr));
+    grid-rows: repeat(5, 100px);
+  }
 }
 
 .el {
@@ -25,15 +36,18 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-weight: bold;
 
   &__number {
     font-size: 14px;
-    font-weight: bold;
   }
 
   &__symbol {
     font-size: 24px;
-    font-weight: bold;
+  }
+
+  &__name {
+    font-size: 10px;
   }
 }
 
