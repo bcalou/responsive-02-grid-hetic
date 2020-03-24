@@ -36,3 +36,13 @@ $lightness: 40%;
 
   $hue: $hue+40;
 }
+
+
+$desktop-up: 1400px;
+
+
+@mixin desktop-up {
+  @media (min-width: $desktop-up) {
+    @content;
+  }
+}
