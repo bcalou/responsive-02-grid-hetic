@@ -1,5 +1,6 @@
 @import '../scss/config/mixin.scss';
 @import '../scss/vendors/reset.css';
+@import '../scss/blocs/elements.scss';
 
 * {
   box-sizing: border-box;
@@ -33,7 +34,7 @@ body {
 
 @for $i from 1 through length($types) {
   .el--#{nth($types, $i)} {
-    background-color: #{hsl($i * 32.5, 80, 50)};
+    background-color: hsl($i * (360 / length($types) - 1), 50, 50);
   }
 }
 
