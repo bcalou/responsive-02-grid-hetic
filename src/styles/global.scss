@@ -1,0 +1,56 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-gap: 0.2rem;
+
+  @include elementTable {
+    grid-template-columns: repeat(18, minmax(50px, 1fr));
+    grid-template-rows: repeat(10, 100px);
+    grid-gap: 0.2rem;
+
+    @for $i from 0 through 18 {
+      .el[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+
+    @for $i from 0 through 10 {
+      .el[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+  }
+}
+
+.el {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  &__symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &__name {
+    @include elementTable {
+      font-size: 10px;
+    }
+  }
+}
+
+$types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
+  alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+$hue: 0deg;
+$saturation: 100%;
+$lightness: 40%;
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl($hue $saturation $lightness);
+  }
+  $hue: $hue + 40;
+}

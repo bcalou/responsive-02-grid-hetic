@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+@mixin elementTable {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@import "reset.scss";
+@import "global.scss";
