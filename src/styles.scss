@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./mixin.scss";
 
 * {
   box-sizing: border-box;
@@ -44,6 +45,28 @@ body {
     &__name {
       padding: 20px 0px 10px 0px;
       font-weight: lighter;
+    }
+  }
+}
+
+@include desktop {
+  body {
+    grid-template-columns: repeat(18, minmax(150px, 1fr));
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .el {
+    &__name {
+      font-size: 10px;
+    }
+  }
+  @for $i from 1 through 7 {
+    .el[data-period="#{$i}"] {
+      grid-row: $i;
+    }
+  }
+  @for $i from 1 through 18 {
+    .el[data-group="#{$i}"] {
+      grid-column: $i;
     }
   }
 }
