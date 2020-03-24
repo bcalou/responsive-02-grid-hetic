@@ -1,0 +1,19 @@
+@import 'reset/reset.scss';
+$colors: red, blue, green, purple, pink, yellow, aquamarine, salmon, brown;
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+.el{
+   background-color:grey;
+}
+@each $type in $types {
+  .el--#{$type} {
+        background-color:hsl(0 + (30), 100, 50)
+  
+  }
+}; 
