@@ -6,7 +6,7 @@ img {
   max-width: 100%;
 }
 
-@mixin classicTable {
+@mixin elementTable {
   @media (min-width: 1400px) {
     @content;
   }
