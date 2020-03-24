@@ -1,0 +1,46 @@
+@import "./reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.el {
+  color: black;
+}
+
+$types: alkaliMetal lanthanides nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+@each $type in $types {
+  .el--#{alkaliMetal} {
+    background-color: hsl(40deg 80% 80%);
+  }
+  .el--#{lanthanides} {
+    background-color: hsl(80deg 80% 80%);
+  }
+  .el--#{nobleGas} {
+    background-color: hsl(120deg 80% 80%);
+  }
+  .el--#{transitionMetal} {
+    background-color: hsl(160deg 80% 80%);
+  }
+  .el--#{postTransitionMetal} {
+    background-color: hsl(200deg 80% 80%);
+  }
+  .el--#{alkalineEarthMetal} {
+    background-color: hsl(240deg 80% 80%);
+  }
+  .el--#{actinide} {
+    background-color: hsl(280deg 80% 80%);
+  }
+  .el--#{metalloid} {
+    background-color: hsl(320deg 80% 80%);
+  }
+  .el--#{otherNonMetal} {
+    background-color: hsl(360deg 80% 80%);
+  }
+}
