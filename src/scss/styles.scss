@@ -20,32 +20,19 @@ metalloid,
 otherNonMetal;
 
 
-$length: 360;
-$nth : 9;
-$index: 1;
+// $length: 360;
+// $nth : 9;
+// $index: 1;
 
+
+$hue: 0deg;
+$saturation: 100%;
+$lightness: 40%;
 
 @each $type in $types {
   .el--#{$type} {
-    @for $i from 1 to $nth {
-      background-color: hsl(($i * 40deg) 100% 20%);
-    }
+    background-color: hsl($hue $saturation $lightness);
   }
+
+  $hue: $hue+40;
 }
-
-// @for $i from 1 through 9 {
-//   @each $type in $types {
-//     .el--#{$type} {
-//       color: hsl(($i * 40deg) 100% 20%);
-
-//     }
-//   }
-// }
-
-// $base-color: 0;
-
-// @for $i from 1 through 9 {
-//   .el--#{$type} {
-//     background-color: hsl(($i * 40deg) 100% 20%);
-//   }
-// }
