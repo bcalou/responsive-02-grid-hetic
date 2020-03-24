@@ -7,6 +7,10 @@ $types: "alkaliMetal", "lanthanide", "nobleGas", "transitionMetal",
   "otherNonMetal";
 $deg: 0;
 
+.el {
+  background-color: lightgrey;
+}
+
 @each $type in $types {
   $deg: $deg + $offset;
   .el--#{$type} {
