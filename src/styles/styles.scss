@@ -8,8 +8,28 @@ img {
   max-width: 100%;
 }
 
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+  grid-template-rows: 110px;
+  grid-gap: 5px;
+  padding: 5px;
+}
 .el {
   color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.el__number {
+  padding: 10px 0 20px 0;
+}
+.el__symbol {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+.el__name {
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 $types: alkaliMetal lanthanides nobleGas transitionMetal postTransitionMetal
