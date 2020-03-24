@@ -52,328 +52,328 @@ table {
   border-spacing: 0;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #141110;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #141110;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #141110;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #141110;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #141110;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #141110;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #141110;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #141110;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #141110;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #2c251b;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #2c251b;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #2c251b;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #2c251b;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #2c251b;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #2c251b;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #2c251b;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #2c251b;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #2c251b;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #494522;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #494522;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #494522;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #494522;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #494522;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #494522;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #494522;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #494522;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #494522;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #5c6a25;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #5c6a25;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #5c6a25;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #5c6a25;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #5c6a25;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #5c6a25;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #5c6a25;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #5c6a25;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #5c6a25;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #598f24;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #598f24;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #598f24;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #598f24;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #598f24;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #598f24;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #598f24;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #598f24;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #598f24;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #3db81e;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #3db81e;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #3db81e;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #3db81e;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #3db81e;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #3db81e;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #3db81e;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #3db81e;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #3db81e;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #14e629;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #14e629;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #14e629;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #14e629;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #14e629;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #14e629;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #14e629;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #14e629;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #14e629;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #23fb79;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #23fb79;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #23fb79;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #23fb79;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #23fb79;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #23fb79;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #23fb79;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #23fb79;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #23fb79;
 }
 
-.el--alkaliMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkaliMetal {
+  background: #42ffc6;
 }
 
-.el--lanthanide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--lanthanide {
+  background: #42ffc6;
 }
 
-.el--nobleGas {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--nobleGas {
+  background: #42ffc6;
 }
 
-.el--transitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--transitionMetal {
+  background: #42ffc6;
 }
 
-.el--postTransitionMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--postTransitionMetal {
+  background: #42ffc6;
 }
 
-.el--alkalineEarthMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--alkalineEarthMetal {
+  background: #42ffc6;
 }
 
-.el--actinide {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--actinide {
+  background: #42ffc6;
 }
 
-.el--metalloid {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--metalloid {
+  background: #42ffc6;
 }
 
-.el--otherNonMetal {
-  background: calc(hsl(30deg, 11%, 8%) + $i);
+.el.el--otherNonMetal {
+  background: #42ffc6;
 }
 
 * {

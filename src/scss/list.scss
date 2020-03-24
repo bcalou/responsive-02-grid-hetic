@@ -1,8 +1,8 @@
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
-@for $i from 2 through 10 {
+@for $i from 1 through 9 {
     @each $type in $types {
-        .el--#{$type} {
-            background: calc(hsl(30deg, 11%, 8%) + $i);
+        .el.el--#{$type} {
+            background: hsl(18deg * $i, 12% * $i, 7% * $i);
         }
     }
-} 
+}
