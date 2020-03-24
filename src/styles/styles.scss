@@ -15,14 +15,19 @@ img {
   color: lightgray;
 }
 
-// @each $type in $types {
-//   .el--#{$type} {
-//     color: hsl(calc(index($types, $type) * 36), 50, 50);
-//   }
-// }
-
 @each $type in $types {
   .el--#{$type} {
     background-color: hsl((36 * index($types, $type)), 35, 50);
   }
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(300px, 300px);
+  grid-gap: 10px;
+}
+
+article {
+  height: 200px;
 }
