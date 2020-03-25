@@ -7,3 +7,37 @@
     max-width: 100%;
   }
 
+.el {
+    background-color:lightgrey;
+}
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+
+@each $types in $types {
+    .el--otherNonMetal{
+            background-color: rgb(252, 77, 77);
+     }
+    .el--nobleGas{
+        background-color: rgb(43, 245, 228);
+    }
+    .el--alkaliMetal{
+        background-color: rgb(62, 197, 73);
+    }
+    .el--alkalineEarthMetal{
+        background-color: rgb(209, 68, 190);
+    }
+    .el--metalloid{
+        background-color: rgb(207, 136, 29);
+    }
+    .el--postTransitionMetal{
+        background-color: rgb(24, 66, 207);
+    }
+    .el--metalloid{
+        background-color: rgb(187, 211, 53);
+    }
+    .el--transitionMetal{
+        background-color: rgb(241, 120, 235);
+    }
+    
+    
+}
