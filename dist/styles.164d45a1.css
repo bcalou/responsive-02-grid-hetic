@@ -48,6 +48,14 @@ table {
   border-spacing: 0;
 }
 
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  grid-gap: 6px;
+  grid-auto-rows: 128px;
+  margin: 6px 6px 0 6px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -57,43 +65,49 @@ img {
 }
 
 .el {
-  color: lightgrey;
+  display: flex;
+  background-color: lightgrey;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .el--alkaliMetal {
-  background-color: white;
+  background-color: #f5daa3;
 }
 
 .el--lanthanide {
-  background-color: #0a8539;
+  background-color: #daf5a3;
 }
 
 .el--nobleGas {
-  background-color: #3f1c3b;
+  background-color: #a3f5a3;
 }
 
 .el--transitionMetal {
-  background-color: #061d22;
+  background-color: #a3f5da;
 }
 
 .el--postTransitionMetal {
-  background-color: #dac1a0;
+  background-color: #a3daf5;
 }
 
 .el--alkalineEarthMetal {
-  background-color: #e7ccfa;
+  background-color: #a3a3f5;
 }
 
 .el--actinide {
-  background-color: #383500;
+  background-color: #daa3f5;
 }
 
 .el--metalloid {
-  background-color: #fafeff;
+  background-color: #f5a3da;
 }
 
 .el--otherNonMetal {
-  background-color: #344555;
+  background-color: #f5a3a3;
 }
 
 /*# sourceMappingURL=/styles.164d45a1.css.map */

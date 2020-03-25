@@ -1,5 +1,13 @@
 @import "blocs/reset";
 
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  grid-gap: 6px;
+  grid-auto-rows: 128px;
+  margin: 6px 6px 0 6px;
+  }
+
 * {
     box-sizing: border-box;
   }
@@ -9,17 +17,22 @@
   }
 
   .el {
-    color: lightgrey;
+    display: flex;
+    background-color: lightgrey;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
   }
 
   $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
-
+  $length: length($types);
+  $step: 360deg / $length; 
+  
   @each $type in $types {
     .el--#{$type} {
-      $hue: random(360);
-      $sat: random(100%);
-      $light: random(100%);
-      background-color: hsl($hue, $sat, $light);
+      $index: index($types, $type);
+      background-color: hsl($step * $index, 80%, 80%);
     }
   }
-  
