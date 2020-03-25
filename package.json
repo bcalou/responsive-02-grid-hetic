@@ -4,7 +4,6 @@
   "description": "## Entraînement",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "parcel src/index.html"
   },
   "repository": {
@@ -19,6 +18,7 @@
   },
   "homepage": "https://github.com/Michael2506/responsive-02-grid-hetic#readme",
   "devDependencies": {
+    "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.3"
   }
