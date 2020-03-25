@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Idriss91130/responsive-02-grid-hetic#readme",
   "dependencies": {
     "core-js": "^3.6.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
   }
 }

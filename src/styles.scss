@@ -4,18 +4,22 @@
   box-sizing: border-box;
 }
 
-$colors: red, blue, green, yellow;
-
-@each $color in $colors {
-  .el--#{$color} {
-    background-color: #{$color};
-  }
-}
-
 img {
   max-width: 100%;
 }
 
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+$length: length($types); /* 9 */
+$step: 360deg / $length; /* 40deg */
+
 .el {
-  color: lightgrey;
+  background-color: lightgrey;
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
 }
