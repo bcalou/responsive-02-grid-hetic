@@ -1,0 +1,20 @@
+@mixin text_center {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.el{
+&__number{
+  @include text_center();
+  font-family: "Cambria Math";
+}
+&__symbol{
+  @include text_center();
+  font-weight: bold;
+}
+&__name{
+  @include text_center();
+  font-size: 10px;
+}
+}
