@@ -1,11 +1,5 @@
 @import "reset.scss";
 
-$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
-$hue: 0;
-$saturation: 100;
-$lightness: 50;
-$alpha: 0.6;
-
 * {
   box-sizing: border-box;
 }
@@ -44,12 +38,15 @@ body {
 .el__name {
     font-size: 10px;
 }
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+$step: 360/ length($types);
   
 @each $type in $types {
   .el--#{$type} {
-    background-color: hsl($hue $saturation $lightness / $alpha); 
-    border: 3px solid hsl($hue $saturation $lightness);
+    $index: index($types, $type);
+    background-color: hsl($step*$index, 80%, 80%, 0.7); 
+    border: 3px solid hsl($step*$index, 80%, 80%);
     color: black;
   }
-  $hue: $hue + 40;
 }
