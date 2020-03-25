@@ -99,17 +99,22 @@ body {
     }
 }
 
+
 .state {
-  grid-column-start: 3;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: bold;
+  display: none;
+
+  @include large {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
 
 .state__el {
