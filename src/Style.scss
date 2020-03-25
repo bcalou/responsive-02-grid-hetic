@@ -1,5 +1,11 @@
 @import "reset.scss";
 
+@mixin large {
+  @media(min-width: 1400px){
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,10 +17,14 @@ img {
 body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-auto-rows: minmax(100px, 1fr);
-    grid-gap: 8px;
-    place-items: stretch;
-    padding: 8px;
+    grid-auto-rows: 100px;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+
+    @include large {
+      grid-template-columns: repeat(18, 1fr);
+      grid-template-rows: repeat(7, 80px);
+    }
 }
   
 .el {
@@ -25,18 +35,45 @@ body {
     background-color: lightgrey;
     border: 2px solid darkgrey;
     font-family: Helvetica, sans-serif;
+
+    @include large {
+      @for $i from 1 through 18{
+        &[data-group="#{$i}"]{
+          grid-column: #{$i};
+        }
+      }
+
+      @for $i from 1 through 7{
+        &[data-period="#{$i}"]{
+          grid-row: #{$i};
+        }
+      }
+    }
 }
   
 .el__number {
     font-size: 16px;
+
+    @include large {
+      font-size: 12px;
+    }
 }
   
 .el__symbol {
     font-size: 24px;
+
+    @include large {
+      font-size: 14px;
+      font-weight: bold;
+    }
 }
   
 .el__name {
     font-size: 10px;
+
+    @include large {
+      font-size: 8px;
+    }
 }
 
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
@@ -45,8 +82,8 @@ $step: 360/ length($types);
 @each $type in $types {
   .el--#{$type} {
     $index: index($types, $type);
-    background-color: hsl($step*$index, 80%, 80%, 0.7); 
-    border: 3px solid hsl($step*$index, 80%, 80%);
+    background-color: hsl($step*$index, 100%, 40%, 0.7); 
+    border: 3px solid hsl($step*$index, 100%, 40%);
     color: black;
   }
 }
