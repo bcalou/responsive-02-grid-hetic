@@ -6,6 +6,7 @@ $metalloid-color: hsl(110deg, 50, 50);
 $postTransitionMetal: hsl(160deg, 50, 50);
 $transitionMetal-color: hsl(190deg, 50, 50);
 
+
 .el {
   background-color: lightgrey;
 }
@@ -41,4 +42,17 @@ $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
   align-items: center;
   justify-content:space-between;
   margin: 1px;
+
+  &__symbol {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__number {
+    font-size: 15px;
+  }
+
+  &__name {
+    font-size: 10px;
+  }
 }
