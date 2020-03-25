@@ -7,4 +7,44 @@ img {
 }
 
 @import "reset.scss";
-@import "color.scss";
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+}
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$step: 360deg / length($types);
+
+.el {
+  background-color: lightgrey;
+
+  @media (min-width: 1400px) {
+    @for $i from 1 through 7 {
+      &[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+    @for $i from 1 through 18 {
+      &[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+  }
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
+}
