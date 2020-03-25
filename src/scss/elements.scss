@@ -1,0 +1,11 @@
+.el {
+    width: 100px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    abbr {
+        font-size: 24px;
+    }
+}
