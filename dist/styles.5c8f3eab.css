@@ -92,12 +92,6 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 5px;
 }
-@media (min-width: 1400px) {
-  body {
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-  }
-}
 
 article {
   padding: 1.5rem;
@@ -185,7 +179,7 @@ body {
 @media (min-width: 1400px) {
   body {
     font-size: 10px;
-    grid-template-columns: repeat(18, 5.3%);
+    grid-template-columns: repeat(18, 1fr);
   }
 }
 
