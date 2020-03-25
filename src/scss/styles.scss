@@ -20,22 +20,41 @@ metalloid,
 otherNonMetal;
 
 
+/* ma version */
 
-$hue: 0deg;
+// $hue: 0deg;
+// $saturation: 100%;
+// $lightness: 40%;
+
+// @each $type in $types {
+//   .el--#{$type} {
+//     background-color: hsl($hue $saturation $lightness);
+//   }
+//   $hue: $hue+40;
+// }
+
+
+
+/* Version Bastien Calou */
+
+.test {
+  $test: index($types, metalloid);
+}
+
+$step: 360deg / length($types);
+/** 40 deg **/
 $saturation: 100%;
 $lightness: 40%;
 
 @each $type in $types {
   .el--#{$type} {
-    background-color: hsl($hue $saturation $lightness);
+    $index: index($types, $type);
+    background-color: hsl($step * $index, $saturation, $lightness);
   }
-
-  $hue: $hue+40;
 }
 
 
 $desktop-up: 1400px;
-
 
 @mixin desktop-up {
   @media (min-width: $desktop-up) {
