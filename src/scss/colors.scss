@@ -7,8 +7,8 @@ $length: length($types);
 
 @each $type in $types {
     $index: index($types, $type);
-    $hue: calc(360 / #{$length} * #{$index});
+    $hue: 360 / $length * $index;
     .el--#{$type} {
-        background: hsl($hue, 25%, 50%)
+        background: hsl($hue, 25%, 50%);
     }
 }
