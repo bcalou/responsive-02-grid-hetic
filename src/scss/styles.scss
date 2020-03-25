@@ -9,6 +9,7 @@
   
 body {
   display: grid;
+  @include desktopParameters;
 }
 
 img {

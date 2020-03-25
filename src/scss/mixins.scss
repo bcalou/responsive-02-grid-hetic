@@ -1,0 +1,6 @@
+@mixin desktopParameters {
+    @media (min-width: 1400px) {
+        font-size: 10px;
+        grid-template-columns: repeat(18, 5.3%);
+    }
+}
