@@ -53,327 +53,39 @@ table {
 }
 
 .el.el--alkaliMetal {
-  background: #141110;
+  background: #d6ad5c;
 }
 
 .el.el--lanthanide {
-  background: #141110;
+  background: #add65c;
 }
 
 .el.el--nobleGas {
-  background: #141110;
+  background: #5cd65c;
 }
 
 .el.el--transitionMetal {
-  background: #141110;
+  background: #5cd6ad;
 }
 
 .el.el--postTransitionMetal {
-  background: #141110;
+  background: #5cadd6;
 }
 
 .el.el--alkalineEarthMetal {
-  background: #141110;
+  background: #5c5cd6;
 }
 
 .el.el--actinide {
-  background: #141110;
+  background: #ad5cd6;
 }
 
 .el.el--metalloid {
-  background: #141110;
+  background: #d65cad;
 }
 
 .el.el--otherNonMetal {
-  background: #141110;
-}
-
-.el.el--alkaliMetal {
-  background: #2c251b;
-}
-
-.el.el--lanthanide {
-  background: #2c251b;
-}
-
-.el.el--nobleGas {
-  background: #2c251b;
-}
-
-.el.el--transitionMetal {
-  background: #2c251b;
-}
-
-.el.el--postTransitionMetal {
-  background: #2c251b;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #2c251b;
-}
-
-.el.el--actinide {
-  background: #2c251b;
-}
-
-.el.el--metalloid {
-  background: #2c251b;
-}
-
-.el.el--otherNonMetal {
-  background: #2c251b;
-}
-
-.el.el--alkaliMetal {
-  background: #494522;
-}
-
-.el.el--lanthanide {
-  background: #494522;
-}
-
-.el.el--nobleGas {
-  background: #494522;
-}
-
-.el.el--transitionMetal {
-  background: #494522;
-}
-
-.el.el--postTransitionMetal {
-  background: #494522;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #494522;
-}
-
-.el.el--actinide {
-  background: #494522;
-}
-
-.el.el--metalloid {
-  background: #494522;
-}
-
-.el.el--otherNonMetal {
-  background: #494522;
-}
-
-.el.el--alkaliMetal {
-  background: #5c6a25;
-}
-
-.el.el--lanthanide {
-  background: #5c6a25;
-}
-
-.el.el--nobleGas {
-  background: #5c6a25;
-}
-
-.el.el--transitionMetal {
-  background: #5c6a25;
-}
-
-.el.el--postTransitionMetal {
-  background: #5c6a25;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #5c6a25;
-}
-
-.el.el--actinide {
-  background: #5c6a25;
-}
-
-.el.el--metalloid {
-  background: #5c6a25;
-}
-
-.el.el--otherNonMetal {
-  background: #5c6a25;
-}
-
-.el.el--alkaliMetal {
-  background: #598f24;
-}
-
-.el.el--lanthanide {
-  background: #598f24;
-}
-
-.el.el--nobleGas {
-  background: #598f24;
-}
-
-.el.el--transitionMetal {
-  background: #598f24;
-}
-
-.el.el--postTransitionMetal {
-  background: #598f24;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #598f24;
-}
-
-.el.el--actinide {
-  background: #598f24;
-}
-
-.el.el--metalloid {
-  background: #598f24;
-}
-
-.el.el--otherNonMetal {
-  background: #598f24;
-}
-
-.el.el--alkaliMetal {
-  background: #3db81e;
-}
-
-.el.el--lanthanide {
-  background: #3db81e;
-}
-
-.el.el--nobleGas {
-  background: #3db81e;
-}
-
-.el.el--transitionMetal {
-  background: #3db81e;
-}
-
-.el.el--postTransitionMetal {
-  background: #3db81e;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #3db81e;
-}
-
-.el.el--actinide {
-  background: #3db81e;
-}
-
-.el.el--metalloid {
-  background: #3db81e;
-}
-
-.el.el--otherNonMetal {
-  background: #3db81e;
-}
-
-.el.el--alkaliMetal {
-  background: #14e629;
-}
-
-.el.el--lanthanide {
-  background: #14e629;
-}
-
-.el.el--nobleGas {
-  background: #14e629;
-}
-
-.el.el--transitionMetal {
-  background: #14e629;
-}
-
-.el.el--postTransitionMetal {
-  background: #14e629;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #14e629;
-}
-
-.el.el--actinide {
-  background: #14e629;
-}
-
-.el.el--metalloid {
-  background: #14e629;
-}
-
-.el.el--otherNonMetal {
-  background: #14e629;
-}
-
-.el.el--alkaliMetal {
-  background: #23fb79;
-}
-
-.el.el--lanthanide {
-  background: #23fb79;
-}
-
-.el.el--nobleGas {
-  background: #23fb79;
-}
-
-.el.el--transitionMetal {
-  background: #23fb79;
-}
-
-.el.el--postTransitionMetal {
-  background: #23fb79;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #23fb79;
-}
-
-.el.el--actinide {
-  background: #23fb79;
-}
-
-.el.el--metalloid {
-  background: #23fb79;
-}
-
-.el.el--otherNonMetal {
-  background: #23fb79;
-}
-
-.el.el--alkaliMetal {
-  background: #42ffc6;
-}
-
-.el.el--lanthanide {
-  background: #42ffc6;
-}
-
-.el.el--nobleGas {
-  background: #42ffc6;
-}
-
-.el.el--transitionMetal {
-  background: #42ffc6;
-}
-
-.el.el--postTransitionMetal {
-  background: #42ffc6;
-}
-
-.el.el--alkalineEarthMetal {
-  background: #42ffc6;
-}
-
-.el.el--actinide {
-  background: #42ffc6;
-}
-
-.el.el--metalloid {
-  background: #42ffc6;
-}
-
-.el.el--otherNonMetal {
-  background: #42ffc6;
+  background: #d65c5c;
 }
 
 * {
