@@ -1,9 +1,14 @@
 @import "reset.scss";
 @import "list.scss";
+@import "mobileGrid.scss";
 * {
     box-sizing: border-box;
   }
   
+body {
+  display: grid;
+}
+
   img {
     max-width: 100%;
   }
