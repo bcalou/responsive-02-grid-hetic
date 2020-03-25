@@ -1,0 +1,23 @@
+@import "reset";
+
+$types: (
+  "alkaliMetal" hsl(41, 100, 70),
+  "lanthanide" hsl(17, 100, 80),
+  "nobleGas" hsl(199, 95, 73),
+  "transitionMetal" hsl(322, 62, 83),
+  "postTransitionMetal" hsl(185, 43, 76),
+  "alkalineEarthMetal" hsl(59, 100, 73),
+  "actinide" hsl(322, 62, 83),
+  "metalloid" hsl(154, 40, 73),
+  "otherNonMetal" hsl(135, 77, 56)
+);
+
+.el {
+  background-color: lightgrey;
+}
+
+@each $type, $color in $types {
+  .el--#{$type} {
+    background-color: $color;
+  }
+}
