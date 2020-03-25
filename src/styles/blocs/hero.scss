@@ -1,0 +1,70 @@
+$otherMonMetal-color: hsl(0deg, 50, 50);
+$nobleGas-color: hsl(30deg, 50, 50);
+$AlkaliMetal-color: hsl(50deg, 50, 50);
+$alkalineEarthMetal-color: hsl(70deg, 50, 50);
+$metalloid-color: hsl(110deg, 50, 50);
+$postTransitionMetal: hsl(160deg, 50, 50);
+$transitionMetal-color: hsl(190deg, 50, 50);
+
+
+.el {
+  background-color: lightgrey;
+}
+
+$types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+@each $type in $types {
+  .el--otherNonMetal {
+    background-color: $otherMonMetal-color;
+  }
+  .el--nobleGas {
+    background-color: $nobleGas-color;
+  }
+  .el--alkaliMetal {
+    background-color: $AlkaliMetal-color;
+  }
+  .el--alkalineEarthMetal {
+    background-color: $alkalineEarthMetal-color;
+  }
+  .el--metalloid {
+    background-color: $metalloid-color;
+  }
+  .el--postTransitionMetal {
+    background-color: $postTransitionMetal;
+  }
+  .el--transitionMetal {
+    background-color: $transitionMetal-color;
+  }
+}
+
+.el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  margin: 1px;
+
+  &__symbol {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__number {
+    font-size: 15px;
+  }
+
+  &__name {
+    font-size: 10px;
+  }
+}
+
+@for $i from 1 through 7 {
+  [data-period='#{$i}'] {
+    grid-row: $i;
+  }
+}
+
+@for $i from 1 through 18 {
+  [data-group='#{$i}'] {
+    grid-column: $i;
+  }
+} 
