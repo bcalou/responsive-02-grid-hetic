@@ -6,6 +6,9 @@
   }
 }
 
+$types: alkaliMetal lanthanides nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+$step: 360/ length($types);
+
 * {
   box-sizing: border-box;
 }
@@ -18,12 +21,13 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-auto-rows: 100px;
-    grid-gap: 0.5rem;
+    grid-gap: 0.2rem;
     padding: 1rem;
+    font-family: Helvetica, sans-serif;
 
     @include large {
       grid-template-columns: repeat(18, 1fr);
-      grid-template-rows: repeat(7, 80px);
+      grid-template-rows: repeat(10, 70px);
     }
 }
   
@@ -34,7 +38,7 @@ body {
     justify-content: space-around;
     background-color: lightgrey;
     border: 2px solid darkgrey;
-    font-family: Helvetica, sans-serif;
+    border: 2px solid black;
 
     @include large {
       @for $i from 1 through 18{
@@ -43,12 +47,19 @@ body {
         }
       }
 
-      @for $i from 1 through 7{
+      @for $i from 1 through 10{
         &[data-period="#{$i}"]{
           grid-row: #{$i};
         }
-      }
+      }    
     }
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step*$index, 100%, 40%, 0.7);
+  }
 }
   
 .el__number {
@@ -66,6 +77,18 @@ body {
       font-size: 14px;
       font-weight: bold;
     }
+
+    &[data-state="liquid"]{
+      color: blue;
+    }
+
+    &[data-state="gas"]{
+      color:red;
+    }
+
+    &[data-state="unknown"]{
+      color: darkslategrey;
+    }
 }
   
 .el__name {
@@ -76,14 +99,39 @@ body {
     }
 }
 
-$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
-$step: 360/ length($types);
-  
-@each $type in $types {
-  .el--#{$type} {
-    $index: index($types, $type);
-    background-color: hsl($step*$index, 100%, 40%, 0.7); 
-    border: 3px solid hsl($step*$index, 100%, 40%);
-    color: black;
-  }
+.state {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.state__el {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.state__symbol {
+  border: 2px solid black;
+  padding: 5px;
+  margin-right: 10px;
+} 
+
+.state__el--liquid {
+  color: blue;
+}
+
+.state__el--gas {
+  color:red;
+}
+
+.state__el--unknown {
+  color:darkslategrey;
 }
