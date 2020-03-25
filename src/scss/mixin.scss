@@ -1,21 +1,5 @@
 @mixin large {
   @media (min-width: 1400px) {
-    font-size: 10px;
-    column-count: 18;
-    grid-template-columns: repeat(18, 80px);
-    grid-template-rows: repeat(7, 80px);
-    grid-gap: 0.5px;
-
-    @for $i from 0 through 7 {
-      .el[data-period="#{$i}"] {
-        grid-row: $i;
-      }
-    }
-
-    @for $i from 0 through 18 {
-      .el[data-group="#{$i}"] {
-        grid-column: $i;
-      }
-    }
+    @content;
   }
 }
