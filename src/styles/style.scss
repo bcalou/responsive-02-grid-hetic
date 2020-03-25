@@ -8,9 +8,22 @@ body {
   padding: 5px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1400px) {
   body {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(18, 1fr);
+  }
+
+  @for $i from 1 through 7 {
+    [data-period="#{$i}"] {
+      grid-row: $i;
+    }
+  }
+
+  @for $i from 1 through 18 {
+    [data-group="#{$i}"] {
+      grid-column: $i;
+    }
   }
 }
 
@@ -25,6 +38,10 @@ article {
 .el {
   background-color: lightgrey;
   color: black;
+}
+
+.el__name {
+  font-size: 10px;
 }
 
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
