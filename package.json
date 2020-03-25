@@ -6,7 +6,9 @@
   "dependencies": {
     "parcel": "^1.12.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.26.3"
+  },
   "scripts": {
     "serve": "parcel src/index.html"
   },
