@@ -13,35 +13,58 @@
   }
 
 
-  $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal 
-          actinide metalloid otherNonMetal;
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
 
-@each $types in $types {
-    .el--otherNonMetal {
-        background-color: rgba(21, 63, 10, 0.432);
-    }
-    .el--nobleGas {
-        background-color: rgba(46, 186, 221, 0.432);
-    }
-    .el--alkaliMetal {
-        background-color: rgba(235, 184, 44, 0.432);
-    }
-    .el--alkalineEarthMetal {
-        background-color: rgba(235, 238, 58, 0.623);
-    }
-    .el--metalloid {
-        background-color: rgba(102, 252, 16, 0.432);
-    }
-    .el--postTransitionMetal {
-        background-color: rgba(28, 250, 195, 0.795);
-    }
-    .el--transitionMetal {
-        background-color: rgba(110, 36, 107, 0.822);
-    }
-    .el--lanthanide {
-        background-color: rgba(233, 99, 10, 0.877);
-    }
-    .el--actinide {
-        background-color: rgba(198, 16, 235, 0.897);
-    }
+$step: 360deg / length($types);
+
+.el {
+  background-color: lightgrey;
 }
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
+}
+
+/* auto fill */
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    grid-gap: 0.5em;
+  }
+
+
+ /* font et position text */ 
+  .el {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  
+    &__symbol {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  @media (min-width: 1400px) { 
+    body {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-template-rows : repeat(7, 100px) 20px repeat(2, 100px);
+    }
+} 
+
+@for $i from 1 through 18 {
+    .el[data-group='#{$i}'] {
+      grid-column: $i;
+    }
+  }
+  @for $i from 1 through 10 {
+    .el[data-period='#{$i}'] {
+      grid-row: $i;
+    }
+  }
