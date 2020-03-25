@@ -1,7 +1,39 @@
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+$step: 360deg / length($types);
+
 body {
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 0.5rem;
 }
 
 img {
     max-width: 100%;
+}
+
+.el {
+    background-color: lightgrey;
+    text-align: center;
+
+    .el__number {
+        font-family: sans-serif;
+    }
+
+    .el__symbol {
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    .el__name {
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+}
+
+@each $type in $types {
+	.el--#{$type} {
+    $index: index($types, $type);
+	background-color: hsl($step * $index, 80%, 80%);
+	}
 }
