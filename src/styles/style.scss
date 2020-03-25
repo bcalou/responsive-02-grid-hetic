@@ -9,6 +9,16 @@
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
   alkalineEarthMetal actinide metalloid otherNonMetal;
 
+$length: length($types);
+$step: 360deg / $length;
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 45%, 55%);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -48,11 +58,5 @@ body {
 
   &__name {
     font-size: 10px;
-  }
-}
-
-@each $type in $types {
-  .el--#{$type} {
-    background-color: hsl(index($types, $type) * 40, 45, 55);
   }
 }
