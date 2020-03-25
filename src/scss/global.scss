@@ -16,31 +16,11 @@ body {
 
   @include tableLarge {
     grid-template-columns: repeat(18, 1fr);
-    grid-auto-rows: 80px;
+    grid-auto-rows: 65px;
   }
 }
 
-.el {
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  @include tableLarge {
-    border-radius: 10px;
-
-    &:hover {
-      background-color: white;
-      cursor: pointer;
-    }
-    &__name,
-    &__number {
-      font-size: 10px;
-    }
-  }
-}
-
+// clean table by period and group
 @include tableLarge {
   @for $group from 1 through 18 {
     .el[data-group="#{$group}"] {
@@ -51,6 +31,42 @@ body {
   @for $period from 1 through 7 {
     .el[data-period="#{$period}"] {
       grid-row: $period;
+    }
+  }
+
+  @for $i from 57 through 71 {
+    .el:nth-child(#{$i}) {
+      grid-row: 9;
+      grid-column: $i - 57 + 4;
+    }
+  }
+
+  @for $i from 89 through 103 {
+    .el:nth-child(#{$i}) {
+      grid-row: 10;
+      grid-column: $i - 89 + 4;
+    }
+  }
+}
+
+.el {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    color: lightgrey;
+  }
+
+  @include tableLarge {
+    border-radius: 10px;
+    &__name,
+    &__number {
+      font-size: 10px;
     }
   }
 }
