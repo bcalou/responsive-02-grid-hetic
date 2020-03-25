@@ -59,3 +59,18 @@ $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
     margin-top: 5px;
   }
 }
+
+@for $i from 1 through 7 {
+  [data-period='#{$i}'] {
+    grid-row: $i;
+  }
+}
+
+@for $i from 1 through 18 {
+  [data-group='#{$i}'] {
+    grid-column: $i;
+  }
+}
+
+
+
