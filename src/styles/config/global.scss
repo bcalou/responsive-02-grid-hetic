@@ -1,5 +1,6 @@
 @mixin xl {
   @media(min-width: 1400px){
+
     grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
     grid-auto-rows: 142px;
     grid-gap: 1px;
@@ -20,6 +21,4 @@ body {
   grid-auto-rows: 125px;
   grid-gap: 5px;
   @include xl
-
-  
 }
