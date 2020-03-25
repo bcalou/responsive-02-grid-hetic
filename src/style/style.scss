@@ -1,5 +1,11 @@
 @import "reset";
 
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$length: length($types); /* 9 */
+$step: 360deg / $length; /* 40deg */
+
 * {
   box-sizing: border-box;
 }
@@ -9,5 +15,12 @@ img {
 }
 
 .el {
-  color: lightgray;
+  background-color: lightgray;
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
 }
