@@ -60,31 +60,38 @@ img {
   max-width: 100%;
 }
 
-.el {
-  background-color: lightgray;
-  color: black;
-}
 .el--otherNonMetal {
   background-color: #ac92ff;
 }
+
 .el--nobleGas {
   background-color: #91dfff;
 }
+
 .el--alkaliMetal {
   background-color: #ffc591;
 }
+
 .el--alkalineEarthMetal {
   background-color: #ffdf91;
 }
+
 .el--transitionMetal {
   background-color: #ecff91;
 }
+
 .el--postTransitionMetal {
   background-color: #fff991;
 }
+
 .el--metalloid {
   background-color: #92ff9f;
 }
+
+.el--lanthanides {
+  background-color: #d2ff91;
+}
+
 .el--actinide {
   background-color: #c0ff98;
 }
@@ -118,6 +125,177 @@ body {
   justify-content: center;
   padding: 5px;
   font-size: 10px;
+}
+
+@media (min-width: 1400px) {
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
+  .el[data-period="1"] {
+    grid-row: 1;
+  }
+  .el[data-period="2"] {
+    grid-row: 2;
+  }
+  .el[data-period="3"] {
+    grid-row: 3;
+  }
+  .el[data-period="4"] {
+    grid-row: 4;
+  }
+  .el[data-period="5"] {
+    grid-row: 5;
+  }
+  .el[data-period="6"] {
+    grid-row: 6;
+  }
+  .el[data-period="7"] {
+    grid-row: 7;
+  }
 }
 
 /*# sourceMappingURL=/src.80ee2152.css.map */

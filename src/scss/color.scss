@@ -6,45 +6,20 @@ img {
   max-width: 100%;
 }
 
-$otherNonMetal : #ac92ff;
-$nobleGass: #91dfff;
-$alkaliMetal : #ffc591;
-$alkalineEarthMetal: #ffdf91;
-$transitionMetal: #ecff91;
-$postTransitionMetal: #fff991;
-$metalloid: #92ff9f;
-$lanthanides: #d2ff91;
-$actinide: #c0ff98;
+$couleurs: (
+  "otherNonMetal" #ac92ff,
+  "nobleGas" #91dfff,
+  "alkaliMetal" #ffc591,
+  "alkalineEarthMetal" #ffdf91,
+  "transitionMetal" #ecff91,
+  "postTransitionMetal" #fff991,
+  "metalloid" #92ff9f,
+  "lanthanides" #d2ff91,
+  "actinide" #c0ff98,
+);
 
-
-
-.el{
-  background-color: lightgray;
-  color: black;
-
-  &--otherNonMetal{
-    background-color: $otherNonMetal;
+@each $couleur, $color in $couleurs {
+  .el--#{$couleur}{
+    background-color: $color;
   }
-  &--nobleGas{
-    background-color: $nobleGass;
-  }
-  &--alkaliMetal{
-    background-color: $alkaliMetal;
-  }
-  &--alkalineEarthMetal{
-    background-color: $alkalineEarthMetal;
-  }
-  &--transitionMetal{
-    background-color: $transitionMetal;
-  }
-  &--postTransitionMetal{
-    background-color: $postTransitionMetal;
-  }
-  &--metalloid{
-    background-color: $metalloid;
-  }
-  &--actinide{
-    background-color: $actinide;
-  }
-
 }
