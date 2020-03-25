@@ -1,0 +1,64 @@
+@import"reset";
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+    @media (min-width: 1400px){
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-row: repeat(7, 1fr);
+    }
+}      
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$types: (
+  "alkaliMetal" hsl(252, 77, 77),
+  "lanthanide" hsl(22, 77, 77),
+  "nobleGas" hsl(52, 87, 47),
+  "transitionMetal" hsl(152, 77, 77),
+  "postTransitionMetal" hsl(452, 77, 47),
+  "alkalineEarthMetal" hsl(55, 77, 77),
+  "actinide" hsl(1052, 77, 77),
+  "metalloid" hsl(352, 77, 67),
+  "otherNonMetal" hsl(335, 77, 56)
+);
+
+.el {
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  @media (min-width: 1400px){
+    @for $i from 1 through 7 {
+        &[data-period='#{$i}']{
+        grid-row: $i;
+    }
+  }
+  @for $i from 1 through 18 {
+        &[data-group='#{$i}']{
+            grid-column: $i;
+        }
+    }
+}
+
+
+  &__symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+@each $type, $color in $types {
+  .el--#{$type} {
+    background-color: $color;
+  }
+}
