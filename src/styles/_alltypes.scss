@@ -16,9 +16,14 @@ $desktop: 1400px;
     @content;
   }
 }
+$lists: alkaliMetal, nobleGas, transitionMetal, postTransitionMetal,
+  alkalineEarthMetal, actinide, metalloid, otherNonMetal, lanthanides;
 
 .el {
   background-color: lightgrey;
+  &:hover {
+    background-color: hsl(50, 100%, 50%);
+  }
 
   &__number {
     font-size: $small-size;
@@ -34,18 +39,24 @@ $desktop: 1400px;
   }
 }
 
-$lists: alkaliMetal, nobleGas, transitionMetal, postTransitionMetal,
-  alkalineEarthMetal, actinide, metalloid, otherNonMetal, lanthanides;
+//$saturation: 60%;
+//$lightness: 75%;
+//$hue: 360deg;
 
-$saturation: 60%;
-$lightness: 75%;
-$hue: 360deg;
+//@each $list in $lists {
+//.el--#{$list} {
+//  background: hsl($hue, $saturation, $lightness);
+//}
+//$hue: $hue + 200;
+//}
+
+$step: 360deg / length($lists);
 
 @each $list in $lists {
   .el--#{$list} {
-    background: hsl($hue, $saturation, $lightness);
+    $index: index($lists, $list);
+    background: hsl($step * $index, 60%, 75%);
   }
-  $hue: $hue + 200;
 }
 
 body {
