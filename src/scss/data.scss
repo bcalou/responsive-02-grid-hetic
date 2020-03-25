@@ -1,7 +1,8 @@
-// For data period
-
 @for $i from 1 through 18 {
-    .el[data-group="$i"] {
-        grid-column: $i;
+    @for $index from 1 through 7 {
+        article[data-group="$i"][data-period="$index"] {
+            grid-column: $i;
+            grid-row: $index;
+        }
     }
-  }
+}
