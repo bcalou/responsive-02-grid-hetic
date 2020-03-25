@@ -103,6 +103,41 @@ article {
   padding: 1.5rem;
 }
 
+.el[data-period="1"] {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.el[data-period="1"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.el[data-period="1"] {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.el[data-period="1"] {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.el[data-period="1"] {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.el[data-period="1"] {
+  grid-column: 6;
+  grid-row: 6;
+}
+
+.el[data-period="1"] {
+  grid-column: 7;
+  grid-row: 7;
+}
+
 * {
   box-sizing: border-box;
 }
