@@ -23,15 +23,55 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-auto-rows: 100px;
   grid-gap: 4px;
-  
-  .el {
-    border: 1px solid black;
-  }
 
   @include desktop-up {
+
     font-size: 10px;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: 7, 1fr;
+    grid-auto-flow: dense;
+  }
+  
+  .el {
+   
+    border: 1px dotted rgb(8, 4, 49);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    &__symbol {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      
+    }
+    
+
+  
+    
+  
+
+    @include desktop-up {
+
+      font-size: 10px;
+      grid-template-columns: repeat(18, 1fr);
+      grid-template-rows: 7, 1fr;
+
+      @for $i from 1 through 7 {
+        &[data-period='#{$i}']{
+          grid-row: $i;
+        }
+      }
+
+      @for $i from 1 through 18 {
+        &[data-group='#{$i}']{
+          grid-column: $i;
+        }
+      }
+    }
 
   }
 }

@@ -6,6 +6,7 @@ $hue : 360deg / length($types);
 @each $type in $types {
   .el--#{$type} {
     $index: index($types, $type);
+
     background-color: hsl($hue * $index, 40%, 80%);
   }
 }
@@ -15,6 +16,8 @@ $hue : 360deg / length($types);
     @content;
   }
 }
+
+
 
 
 
