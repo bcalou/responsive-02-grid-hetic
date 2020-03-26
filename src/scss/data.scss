@@ -1,6 +1,6 @@
 @for $i from 1 through 18 {
     @for $j from 1 through 7 {
-        .el.el[data-group="$i"][data-period="$j"] {
+        .el.el[data-group="#{$i}"][data-period="#{$j}"] {
             grid-column: $i;
             grid-row: $j;
         }
