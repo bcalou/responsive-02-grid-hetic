@@ -3,15 +3,6 @@ $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
 
 $step: 360deg / length($types);
 
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-}
-
-
 .el {
   background-color: lightgrey;
   display: flex;
@@ -53,6 +44,7 @@ body {
   body {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-template-rows : repeat(7, 100px) 20px repeat(2, 100px);
+    max-height: 100vh;
   }
 
   @for $i from 1 through 18 {
@@ -60,14 +52,9 @@ body {
         grid-column: $i;
       }
     }
-    @for $i from 1 through 10 {
-      .el[data-period='#{$i}'] {
-        grid-row: $i;
-      }
+  @for $i from 1 through 10 {
+    .el[data-period='#{$i}'] {
+      grid-row: $i;
     }
-
-
-
-
-
+  }
 }
