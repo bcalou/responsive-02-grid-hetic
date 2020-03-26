@@ -1,16 +1,53 @@
-@import 'reset';
+@import "reset";
 
-$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+@mixin originaltable {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 * {
-    box-sizing: border-box;
-  }
-  
-  img {
-    max-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-auto-rows: 100px;
+  grid-gap: 0.5em;
+  @include originaltable {
+    grid-template-columns: repeat(18, minmax(60px, 1fr));
   }
 
-  .el{
-      color: lightgrey;
+  .el {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .el__symbol {
+      font-size: 2em;
+    }
+  }
+  @include originaltable {
+    @for $i from 1 through 18 {
+      .el[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+    @for $i from 1 through 7 {
+      .el[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
   }
 
   @each $type in $types {
@@ -18,10 +55,16 @@ $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alka
       background-color: hsl(index($types, $type) * 36, 40, 50);
     }
   }
-body{
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-template-rows: repeat(18, minmax(100px, auto));
-    grid-gap: 0.5em;
 }
+
+//   $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+//   alkalineEarthMetal actinide metalloid otherNonMetal;
+// $length: length($types); /* 9 */
+// $step: 360deg / $length; /* 40deg */
+
+// @each $type in $types {
+//   .el--#{$type} {
+//     $index: index($types, $type);
+//     background-color: hsl($step * $index, 80%, 80%);
+//   }
+// }
