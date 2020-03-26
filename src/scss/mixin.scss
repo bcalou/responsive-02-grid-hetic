@@ -1,0 +1,11 @@
+@mixin tableLarge {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin tableExtraLarge {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
