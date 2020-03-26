@@ -6,8 +6,10 @@ img {
   max-width: 100%;
 }
 
-$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
-  alkalineEarthMetal actinide metalloid otherNonMetal lanthanides actinides;
+$types: alkaliMetal nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal lanthanides;
+
+$steps: 360 / length($types);
 
 @mixin classicTable {
   @media (min-width: 1400px) {
