@@ -1,4 +1,4 @@
-//@import 'reset.css';
+@import 'reset.scss';
 
 @mixin desktop {
     @media (min-width: 1025px) {
