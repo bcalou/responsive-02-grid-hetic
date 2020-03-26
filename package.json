@@ -1,23 +1,24 @@
 {
   "name": "responsive-02-grid-hetic",
   "version": "1.0.0",
-  "description": "Periodic",
+  "description": "Tab periodic",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QuentinHuber/responsive-02-grid-hetic.git"
   },
-  "author": "Quentin H feat bcalou",
+  "author": "Quentin H",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/QuentinHuber/responsive-02-grid-hetic/issues"
   },
-  "homepage": "https://github.com/QuentinHuber/responsive-02-grid-hetic#readme"
+  "homepage": "https://github.com/QuentinHuber/responsive-02-grid-hetic#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3"
+  }
 }
