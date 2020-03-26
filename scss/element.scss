@@ -13,7 +13,7 @@ body{
     grid-auto-rows: 120px;
     grid-template-columns: repeat(auto-fill, minmax(120px,1fr));
     grid-gap: 1rem;
-    background-color: black;
+    background-color: lightgray;
 
 
     @include desktop {
@@ -26,7 +26,11 @@ body{
                 grid-column: $i;
             }
         }
-    
+        @for $i from 0 through 10 {
+            .el[data-period="#{$i}"] {
+              grid-row: $i;
+            }
+        }
     }
 
     
