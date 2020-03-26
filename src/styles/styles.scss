@@ -27,6 +27,8 @@ body {
   }
 }
 
+//FOR
+
 @for $i from 1 through 7 { //align in line nb
   [data-period='1']{
   grid-row: 1;
