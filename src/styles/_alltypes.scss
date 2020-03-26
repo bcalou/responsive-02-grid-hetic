@@ -72,13 +72,13 @@ body {
     grid-template-rows: repeat(10, 88px);
 
     @for $i from 1 through 18 {
-      article[data-group="#{$i}"] {
+      .el[data-group="#{$i}"] {
         grid-column: $i;
       }
     }
 
     @for $i from 1 through 10 {
-      article[data-period="#{$i}"] {
+      .el[data-period="#{$i}"] {
         grid-row: $i;
       }
     }
