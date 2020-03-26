@@ -14,7 +14,7 @@ $saturation : 80%;
 $lightness : 50%;
 
 @each $type in $types {
-    .el--#{w$types} {
+    .el--#{$types} {
         background-color: hsl($hue, $saturation, $lightness);
     }
     
