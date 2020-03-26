@@ -1,8 +1,6 @@
 @import "reset.scss";
-@import "list.scss";
-@import "mobileGrid.scss";
-@import "mixins.scss";
-@import "data.scss";
+@import "list.scss"; // Categories colors
+@import "mixins.scss"; // mixins desktop and data
 
 * {
   box-sizing: border-box;
@@ -10,13 +8,16 @@
   
 body {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
   @include desktopParameters;
+  @include data;
 }
 
 img {
   max-width: 100%;
 }
-  
+
 .el {
   background: lightgrey;
   padding: 1.5rem;

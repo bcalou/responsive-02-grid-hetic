@@ -5,3 +5,16 @@
         grid-template-rows: repeat(7, 1fr);
     }
 }
+
+@mixin data {
+    @media (min-width: 1400px) {
+         @for $i from 1 through 18 {
+             @for $j from 1 through 7 {
+                 .el.el[data-group="#{$i}"][data-period="#{$j}"] {
+                     grid-column: $i;
+                     grid-row: $j;
+                 }
+             }
+         }
+     }
+ } 
