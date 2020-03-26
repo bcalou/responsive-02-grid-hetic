@@ -42,34 +42,33 @@ $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal,
   align-items: center;
   justify-content:space-between;
   margin: 1px;
-  font-family: $font;
 
   &__symbol {
     font-weight: bold;
     font-size: 18px;
   }
 
-  &__name{
-    font-size: 10px;
-    margin-bottom: 5px;
-  }
-
-  &__number{
+  &__number {
     font-size: 15px;
-    margin-top: 5px;
   }
-}
 
-@for $i from 1 through 7 {
-  [data-period='#{$i}'] {
-    grid-row: $i;
+  &__name {
+    font-size: 10px;
   }
-}
+  @media (min-width: 1400px) {
 
-@for $i from 1 through 18 {
-  [data-group='#{$i}'] {
-    grid-column: $i;
+  @for $i from 1 through 7 {
+    &[data-period='#{$i}'] {
+      grid-row: $i;
+    }
   }
+
+  @for $i from 1 through 18 {
+    &[data-group='#{$i}'] {
+      grid-column: $i;
+    }
+  } 
+}
 }
 
 
