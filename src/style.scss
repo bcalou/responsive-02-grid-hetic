@@ -1,0 +1,25 @@
+@import "reset.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$step: 360deg / length($types);
+
+.el {
+  background-color: lightgrey;
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
+}
