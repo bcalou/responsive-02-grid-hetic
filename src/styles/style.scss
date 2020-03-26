@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     align-items: center;
 
-
     &__number {
       font-size: 12px;
       padding-top: 25px;
@@ -39,12 +38,30 @@ body {
   }
 }
 
+@media (min-width: 1400px) {
+
+  @for $i from 1 through 7 {
+    .el[data-period="#{$i}"] {
+      grid-row: $i;
+    }
+
+    @for $i from 1 through 18 {
+      .el[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+  }
+}
+
+
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal alkalineEarthMetal actinide metalloid otherNonMetal;
 
 $step: 360deg / length($types);
 
 .el {
   background-color: lightgrey;
+
+
 }
 
 @each $type in $types {
