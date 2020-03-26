@@ -1,0 +1,12 @@
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+@import "mixin";
+@import "element";
