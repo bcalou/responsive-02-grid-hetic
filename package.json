@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nanoker/responsive-02-grid-hetic/issues"
   },
-  "homepage": "https://github.com/nanoker/responsive-02-grid-hetic#readme"
+  "homepage": "https://github.com/nanoker/responsive-02-grid-hetic#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.26.3"
+  }
 }

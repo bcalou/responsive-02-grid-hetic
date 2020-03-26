@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.el {
+  background-color: lightgrey;
+}
+
+.el--alkaliMetal {
+  background-color: #f5daa3;
+}
+
+.el--lanthanide {
+  background-color: #daf5a3;
+}
+
+.el--nobleGas {
+  background-color: #a3f5a3;
+}
+
+.el--transitionMetal {
+  background-color: #a3f5da;
+}
+
+.el--postTransitionMetal {
+  background-color: #a3daf5;
+}
+
+.el--alkalineEarthMetal {
+  background-color: #a3a3f5;
+}
+
+.el--actinide {
+  background-color: #daa3f5;
+}
+
+.el--metalloid {
+  background-color: #f5a3da;
+}
+
+.el--otherNonMetal {
+  background-color: #f5a3a3;
+}
