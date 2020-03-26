@@ -1,5 +1,17 @@
 @import "blocs/reset";
 
+$types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+$length: length($types);
+$step: 360deg / $length; 
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(157px, 1fr));
@@ -15,14 +27,6 @@ body {
       grid-gap: 1px;
   }
 }
-
-* {
-    box-sizing: border-box;
-  }
-  
-  img {
-    max-width: 100%;
-  }
 
   .el {
     display: flex;
@@ -48,14 +52,21 @@ body {
     margin-top: 5px;
   }
 
-
-  $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
-  $length: length($types);
-  $step: 360deg / $length; 
-  
   @each $type in $types {
     .el--#{$type} {
       $index: index($types, $type);
       background-color: hsl($step * $index, 80%, 80%);
+    }
+  }
+
+  @for $i from 1 through 7 {
+    [data-period='#{$i}'] {
+      grid-row: $i;
+    }
+  }
+  
+  @for $i from 1 through 18 {
+    [data-group='#{$i}'] {
+      grid-column: $i;
     }
   }
