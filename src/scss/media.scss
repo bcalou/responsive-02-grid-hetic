@@ -1,12 +1,19 @@
+body {
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+}
+
 .el {
   @media (min-width: 1400px) {
     @for $i from 1 through 7 {
-      &[data-period='#{$i}'] {
+      &[data-period = '#{$i}'] {
         grid-row: $i;
       }
-    @for $i from 1 through 7 {
-      &[data-period='#{$i}'] {
-        grid-row: $i;
+    @for $i from 8 through 18 {
+      &[data-group = '#{$i}'] {
+        grid-column: $i;
       }   
     } 
     }
