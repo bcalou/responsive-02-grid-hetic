@@ -1,0 +1,120 @@
+$desktop-up: 1400px;
+
+
+@mixin desktop-up {
+  @media (min-width: $desktop-up) {
+    @content;
+  }
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-gap: 0.2rem;
+  justify-content: center;
+
+  @include desktop-up {
+    grid-template-columns: repeat(18, 80px);
+    grid-template-rows: repeat(10, 100px);
+    grid-gap: 0.5rem;
+
+    @for $i from 0 through 18 {
+      .el[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+
+    @for $i from 0 through 10 {
+      .el[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+  }
+}
+
+
+.el {
+  color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Montserrat;
+
+  &--otherNonMetal {
+    &:hover {
+      background-color: white;
+      color: #cc0000;
+    }
+  }
+
+  &--nobleGas {
+    &:hover {
+      background-color: white;
+      color: #00cc00;
+    }
+  }
+
+  &--alkaliMetal {
+    &:hover {
+      background-color: white;
+      color: #cc8800;
+    }
+  }
+
+  &--alkalineEarthMetal {
+    &:hover {
+      background-color: white;
+      color: #0000cc;
+    }
+  }
+
+  &--metalloid {
+    &:hover {
+      background-color: white;
+      color: #cc0088;
+    }
+  }
+
+  &--postTransitionMetal {
+    &:hover {
+      background-color: white;
+      color: #0088cc;
+    }
+  }
+
+  &--transitionMetal {
+    &:hover {
+      background-color: white;
+      color: #00cc88;
+    }
+  }
+
+  &--lanthanide {
+    &:hover {
+      background-color: white;
+      color: #88cc00;
+    }
+  }
+
+  &--actinide {
+    &:hover {
+      background-color: white;
+      color: #8800cc;
+    }
+  }
+}
+
+.el__number {
+  font-size: 15px;
+}
+
+.el__symbol {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.el__name {
+  font-size: 10px;
+}
