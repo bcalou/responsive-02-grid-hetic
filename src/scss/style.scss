@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+@import "reset.scss";
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+@mixin Table {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-gap: 0.2rem;
+
+  @include Table {
+    grid-template-columns: repeat(18, minmax(50px, 1fr));
+  }
+}
+.el {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  &__symbol {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &__name {
+    @include Table {
+      font-size: 10px;
+    }
+  }
+}
+
+@include Table {
+  @for $i from 1 through 18 {
+    .el[data-group="#{$i}"] {
+      grid-column: $i;
+    }
+  }
+  @for $i from 1 through 7 {
+    .el[data-period="#{$i}"] {
+      grid-row: $i;
+    }
+  }
+}
+
+@each $type in $types {
+  .el--#{$type} {
+    background-color: hsl(index($types, $type) * 10, 50, 70);
+  }
+}
