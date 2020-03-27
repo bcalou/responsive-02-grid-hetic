@@ -40,11 +40,9 @@ body {
 
 @media (min-width: 1400px) { 
   body {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(18, 1fr);
     grid-template-rows : repeat(7, 100px);
   }
-
-
 
   @for $i from 1 through 18 {
       .el[data-group='#{$i}'] {
