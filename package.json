@@ -1,0 +1,28 @@
+{
+  "name": "responsive-02-grid-hetic",
+  "version": "1.0.0",
+  "description": "## Entraînement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugoborini/responsive-02-grid-hetic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugoborini/responsive-02-grid-hetic/issues"
+  },
+  "homepage": "https://github.com/hugoborini/responsive-02-grid-hetic#readme",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.3"
+  }
+}
