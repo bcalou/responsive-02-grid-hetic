@@ -1,0 +1,28 @@
+{
+  "name": "responsive-02-grid-hetic",
+  "version": "1.0.0",
+  "description": "Pour se familiariser avec les différentes propriétés : [Grid Garden](https://cssgridgarden.com/#fr)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianamonteiroo/responsive-02-grid-hetic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cristianamonteiroo/responsive-02-grid-hetic/issues"
+  },
+  "homepage": "https://github.com/cristianamonteiroo/responsive-02-grid-hetic#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "blocs": "^2.0.0"
+  }
+}
