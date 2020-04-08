@@ -1,0 +1,25 @@
+@import "blocs/reset";
+
+* {
+    box-sizing: border-box;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+
+  .el {
+    color: lightgrey;
+  }
+
+  $types: alkaliMetal, lanthanide, nobleGas, transitionMetal, postTransitionMetal, alkalineEarthMetal, actinide, metalloid, otherNonMetal;
+
+  @each $type in $types {
+    .el--#{$type} {
+      $hue: random(360);
+      $sat: random(100%);
+      $light: random(100%);
+      background-color: hsl($hue, $sat, $light);
+    }
+  }
+  
