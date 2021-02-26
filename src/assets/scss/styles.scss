@@ -7,6 +7,12 @@ img {
   max-width: 100%;
 }
 
+@mixin large {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 .el {
   background-color: lightgrey;
 }
@@ -30,6 +36,13 @@ body {
   padding: 0.3rem;
   grid-gap: 0.3rem;
   font-family: Verdana, sans-serif;
+
+  @include large {
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    min-height: 100vh;
+    font-size: 10px;
+  }
 }
 
 body > article {
