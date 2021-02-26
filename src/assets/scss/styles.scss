@@ -14,7 +14,25 @@ img {
 }
 
 .el {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: lightgrey;
+
+  @include large {
+    @for $i from 1 through 7 {
+      &[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+
+    @for $i from 1 through 18 {
+      &[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+  }
 }
 
 $types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
@@ -43,11 +61,4 @@ body {
     min-height: 100vh;
     font-size: 10px;
   }
-}
-
-body > article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
 }
