@@ -1,0 +1,104 @@
+@import "reset";
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+@mixin large {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin large-only {
+  @media (min-width: 1400px) and (max-width: 2199px) {
+    @content;
+  }
+}
+@mixin verylarge {
+  @media (min-width: 2200px) {
+    @content;
+  }
+}
+
+.el {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightgrey;
+
+  @include large {
+    @for $i from 1 through 7 {
+      &[data-period="#{$i}"] {
+        grid-row: $i;
+      }
+    }
+
+    @for $i from 1 through 18 {
+      &[data-group="#{$i}"] {
+        grid-column: $i;
+      }
+    }
+  }
+
+  @include large-only {
+    $otherRows: 57 71 9, 89 103 10;
+    @each $first, $last, $row in $otherRows {
+      &:nth-child(n + #{$first}):nth-child(-n + #{$last}) {
+        grid-row: $row;
+      }
+
+      @for $i from $first through $last {
+        &:nth-child(#{$i}) {
+          grid-column: $i - $first + 4;
+        }
+      }
+    }
+  }
+
+  @include verylarge {
+    @for $i from 3 through 18 {
+      &[data-group="#{$i}"] {
+        grid-column: $i + 14;
+      }
+    }
+  }
+}
+
+$types: alkaliMetal lanthanide nobleGas transitionMetal postTransitionMetal
+  alkalineEarthMetal actinide metalloid otherNonMetal;
+
+$step: 360deg / length($types);
+
+@each $type in $types {
+  .el--#{$type} {
+    $index: index($types, $type);
+    background-color: hsl($step * $index, 80%, 80%);
+  }
+}
+
+body {
+  display: grid;
+  grid-auto-rows: 125px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  padding: 0.3rem;
+  grid-gap: 0.3rem;
+  font-family: Verdana, sans-serif;
+
+  @include large {
+    min-height: 100vh;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    font-size: 10px;
+  }
+
+  @include verylarge {
+    min-height: 100vh;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    font-size: 10px;
+  }
+}
